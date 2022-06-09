@@ -170,6 +170,7 @@ class Gain(Input):
                                "phase",
                                "tec",
                                "rotation",
+                               "ambiguity",
                                "rotation_measure",
                                "crosshand_phase"])
     )

@@ -4,6 +4,7 @@ from quartical.gains.phase import Phase
 from quartical.gains.delay import Delay
 from quartical.gains.tec import TEC
 from quartical.gains.rotation import Rotation
+from quartical.gains.ambiguity import Ambiguity
 from quartical.gains.rotation_measure import RotationMeasure
 from quartical.gains.crosshand_phase import CrosshandPhase
 
@@ -16,5 +17,6 @@ TERM_TYPES = {"complex": Complex,
               "delay": Delay,
               "tec": TEC,
               "rotation": Rotation,
+              "ambiguity": Ambiguity,
               "rotation_measure": RotationMeasure,
               "crosshand_phase": CrosshandPhase}
