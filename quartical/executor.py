@@ -65,7 +65,7 @@ def _execute(exitstack):
 
         # NOTE: This is needed to allow threads to spawn processes in a
         # distributed enviroment. This *may* be dangerous. Monitor.
-        dask.config.set({"distributed.worker.daemon": False})
+        # dask.config.set({"distributed.worker.daemon": False})
 
         if dask_opts.address:
             logger.info("Initializing distributed client.")
@@ -87,7 +87,7 @@ def _execute(exitstack):
         # POV, run_on_scheduler is a debugging function.
         # `dask-scheduler --preload install_plugin.py` is the standard but
         # less convenient pattern.
-        client.run_on_scheduler(install_plugin)
+        # client.run_on_scheduler(install_plugin)
 
         logger.info("Distributed client sucessfully initialized.")
 
