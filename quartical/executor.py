@@ -157,10 +157,10 @@ def _execute(exitstack):
 
     with compute_context(dask_opts, output_opts, time_str):
 
-        _, _, stats_xds_list = dask.compute(
+        _, _, _ = dask.compute(
             ms_writes,
             gain_writes,
-            stats_xds_list,
+            # stats_xds_list,
             num_workers=dask_opts.threads,
             optimize_graph=True,
             scheduler=dask_opts.scheduler
@@ -168,7 +168,7 @@ def _execute(exitstack):
 
     logger.success("{:.2f} seconds taken to execute graph.", time.time() - t0)
 
-    log_summary_stats(stats_xds_list)
+    # log_summary_stats(stats_xds_list)
 
     if dask_opts.scheduler == "distributed":
         client.close()  # Close this client, hopefully gracefully.
